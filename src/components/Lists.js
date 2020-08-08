@@ -1,7 +1,27 @@
 import React from 'react'
+import { Eclipse } from "react-loading-io";
+
 
 const Lists = ({lists}) => {
-    return (
+
+    console.log(lists)
+
+    if(lists === undefined || lists.length === 0)
+    {
+        return (
+      <div style = {{margin:"50px"}}>
+      <center><h1> List </h1></center>
+      <div className = 'text-center m-5'>
+      <div>
+            <Eclipse size={200} />
+      </div>
+  </div>
+  </div>
+        )
+    }
+    else
+    {
+      return (
         <div style = {{margin:"50px"}}>
             <center><h1> List </h1></center>
             <div className = 'row'>
@@ -18,6 +38,7 @@ const Lists = ({lists}) => {
         </div>
         </div>
     )
+   }
 };
 
 export default Lists;

@@ -1,5 +1,5 @@
 {
-  "homepage":"http://anandadhikari.github.io/ListAPI",
+  "homepage": "http://anandadhikari.github.io/ListAPI",
   "name": "list",
   "version": "0.1.0",
   "private": true,
@@ -10,6 +10,7 @@
     "acorn": "^7.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-loading-io": "^2.2.1",
     "react-scripts": "3.4.1"
   },
   "scripts": {
@@ -18,7 +19,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-     "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
