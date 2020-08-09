@@ -1,17 +1,20 @@
 import React, {Component} from 'react';
 import Lists from './components/Lists';
+import axios from "axios";
 
 class App extends Component {
     state = {
         lists: []
     };
     componentDidMount() {
-        fetch('https://5d11b2ce84e906001457646a.mockapi.io/testdata')
-            .then(res => res.json())
-            .then((data) => {
-                this.setState({ lists: data })
+            axios
+            .get('https://5d11b2ce84e906001457646a.mockapi.io/testdata')
+            .then((res) => {
+               this.setState({ lists: res.data })
             })
-            .catch(console.log)
+            .catch((err) => {
+              console.log(err)
+            });
     }
 
     render() {

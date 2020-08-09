@@ -3,9 +3,6 @@ import { Eclipse } from "react-loading-io";
 
 
 const Lists = ({lists}) => {
-
-    console.log(lists)
-
     if(lists === undefined || lists.length === 0)
     {
         return (
